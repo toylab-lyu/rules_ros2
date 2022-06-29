@@ -1,0 +1,24 @@
+
+build -c opt
+build --verbose_failures
+build --color=yes
+build --copt="-Wall"
+build --copt="-Wextra"
+build --copt="-Werror"
+build --copt="-fstack-protector-all"
+build --dynamic_mode=default
+build --force_pic
+
+build --action_env=BAZEL_CXXOPTS="-std=c++20"
+
+build --local_ram_resources=HOST_RAM*.5
+build --local_cpu_resources=HOST_CPUS-1
+
+build:debug -c dbg
+build:debug --strip=never
+build:debug --copt="-g"
+
+build:release --strip=always
+build:release --copt="-s"
+build:release --copt="-O3"
+
