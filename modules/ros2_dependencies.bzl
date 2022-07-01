@@ -4,6 +4,7 @@ Transitive dependencies for ros2
 load("//modules/rcutils:transitive.bzl", "load_rcutils_transitive_dependencies")
 load("//modules/rcpputils:transitive.bzl", "load_rcpputils_transitive_dependencies")
 load("//modules/rosidl:transitive.bzl", "load_rosidl_transitive_dependencies")
+load("//modules/rosidl_typesupport:transitive.bzl", "load_rosidl_typesupport_transitive_dependencies")
 load("//modules/rmw:transitive.bzl", "load_rmw_transitive_dependencies")
 
 def load_ros2_transitive_dependencies():
@@ -12,4 +13,5 @@ def load_ros2_transitive_dependencies():
     load_rcutils_transitive_dependencies()
     load_rcpputils_transitive_dependencies()
     load_rosidl_transitive_dependencies()
+    load_rosidl_typesupport_transitive_dependencies()
     load_rmw_transitive_dependencies()

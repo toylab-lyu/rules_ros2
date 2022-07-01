@@ -8,6 +8,7 @@ a separated file extra_dependencies.bzl
 load("//modules/rcutils:direct.bzl", "load_rcutils")
 load("//modules/rcpputils:direct.bzl", "load_rcpputils")
 load("//modules/rosidl:direct.bzl", "load_rosidl")
+load("//modules/rosidl_typesupport:direct.bzl", "load_rosidl_typesupport")
 load("//modules/rmw:direct.bzl", "load_rmw")
 
 def load_ros2_libraries():
@@ -15,4 +16,5 @@ def load_ros2_libraries():
     load_rcutils()
     load_rcpputils()
     load_rosidl()
+    load_rosidl_typesupport()
     load_rmw()
